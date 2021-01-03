@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method = "POST" action="/individual_search/duo_checker">
+    <h2>Duo Checker</h2>
+    <p>First Summoner Name <input type = "text" name = "account1" /></p>
+    <p>Second Summoner Name <input type = "text" name = "account2" /></p>
+    <h4>Queue Select:</h4>
+    <p>
+        Ranked Solo/Duo<input type="checkbox" value="1" name="mycheckbox">
+        Ranked Flex<input type="checkbox" value="2" name="mycheckbox">
+        Norms<input type="checkbox" value="3" name="mycheckbox">
+        Aram<input type="checkbox" value="4" name="mycheckbox">
+    </p>
+    <input type="submit" >
+
+</form>
+
+
+{% endblock %}

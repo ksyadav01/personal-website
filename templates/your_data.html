@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method = "POST" action="/individual_search/your_data">
+    <h2>Individual Data Search</h2>
+    <p>Summoner Name <input type = "text" name = "Summoner Name" /></p>
+    <h4>Queue Select:</h4>
+    <p>
+        Ranked Solo/Duo<input type="checkbox" value="1" name="mycheckbox">
+        Ranked Flex<input type="checkbox" value="2" name="mycheckbox">
+        Norms<input type="checkbox" value="3" name="mycheckbox">
+        Aram<input type="checkbox" value="4" name="mycheckbox">
+    </p>
+    <input type="submit" >
+
+</form>
+
+
+{% endblock %}
