@@ -2,7 +2,8 @@ from flask import Flask, render_template, request, url_for
 # from flask_table import Table, Col
 from werkzeug.utils import redirect
 # import individual_search
-from app import individual_search
+# import individual_search
+from . import individual_search
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'test'

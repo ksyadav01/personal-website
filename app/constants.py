@@ -1,8 +1,4 @@
 from flask import Flask
-from riotwatcher import LolWatcher, ApiError
-import plotly.graph_objects as go
-import json
-
 app = Flask(__name__)
 API_KEY = 'RGAPI-c6e4e7be-124e-46e2-bab2-de3ac3369699'
 #
