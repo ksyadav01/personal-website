@@ -4,9 +4,9 @@ from werkzeug.utils import redirect
 # import individual_search
 # import individual_search
 from . import individual_search
-
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'test'
+from app import app
+# app = Flask(__name__)
+# app.config['SECRET_KEY'] = 'test'
 summoner_name = ""
 duo_name = ""
 game_list = ""
@@ -25,6 +25,7 @@ def about():
 @app.route('/home')
 def home():
     return render_template('home.html', author='Karan')
+
 
 @app.route('/individual_search')
 def individual_searchs():
@@ -103,7 +104,3 @@ def individual_result():
 #         form_data = request.form
 #         print(form_data)
 #         return render_template('individual_result.html', form_data=form_data)
-
-
-if __name__ == '__main__':
-    app.run()

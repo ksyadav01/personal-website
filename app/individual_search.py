@@ -2,7 +2,7 @@ from flask import Flask
 from riotwatcher import LolWatcher, ApiError
 from . import constants
 
-app = Flask(__name__)
+# app = Flask(__name__)
 api_key = constants.API_KEY
 watcher = LolWatcher(api_key)
 my_region = 'na1'
