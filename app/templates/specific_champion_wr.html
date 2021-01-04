@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<form method = "POST" action="/individual_search/specific_champion_wr">
+    <h2>Specific Champion Search</h2>
+    <p>Summoner Name <input type = "text" name = "Summoner Name" /></p>
+    <p>
+        Champion (enter multiple champions with a comma in between each champion, no spaces) <input type = "text" name = "Champion" />
+        Match_History<input type="checkbox" value="1" name="Match_History">
+    </p>
+    <h4>Queue Select:</h4>
+    <p>
+        Ranked Solo/Duo<input type="checkbox" value="1" name="mycheckbox">
+        Ranked Flex<input type="checkbox" value="2" name="mycheckbox">
+        Norms<input type="checkbox" value="3" name="mycheckbox">
+        Aram<input type="checkbox" value="4" name="mycheckbox">
+    </p>
+    <input type="submit" >
+
+</form>
+
+{% endblock %}
