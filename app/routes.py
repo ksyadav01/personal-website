@@ -27,12 +27,12 @@ def home():
     return render_template('home.html', author='Karan')
 
 
-@app.route('/individual_search')
+@app.route('/projects/karan.gg/individual_search')
 def individual_searchs():
     return render_template('individual_search.html')
 
 
-@app.route('/individual_search/your_data', methods=['POST', 'GET'])
+@app.route('/projects/karan.gg/individual_search/your_data', methods=['POST', 'GET'])
 def your_data():
     if request.method == 'POST':
         global game_list
@@ -48,7 +48,7 @@ def your_data():
     return render_template('your_data.html')
 
 
-@app.route('/individual_search/specific_champion_wr', methods=['POST', 'GET'])
+@app.route('/projects/karan.gg/individual_search/specific_champion_wr', methods=['POST', 'GET'])
 def champion_wr():
     if request.method == 'POST':
         global champion
@@ -68,7 +68,7 @@ def champion_wr():
     return render_template('specific_champion_wr.html')
 
 
-@app.route('/individual_search/duo_checker', methods=['POST', 'GET'])
+@app.route('/projects/karan.gg/individual_search/duo_checker', methods=['POST', 'GET'])
 def duo_checker():
     if request.method == 'POST':
         global duo_name
@@ -85,7 +85,7 @@ def duo_checker():
     return render_template('duo_checker.html')
 
 
-@app.route('/individual_result')
+@app.route('/projects/karan.gg/individual_result')
 def individual_result():
     # print(champion)
     # if individual_search_type == "champion_wr":

@@ -1,9 +1,352 @@
-{% extends "base.html" %}
-{% block content %}
-<h5>Your Overall Data</h5><a href="/individual_search/your_data">Your Data</a>
-Get your overall data, comprising of rank, lp, and wr for specified gamemodes
-<h5>Specific Champion Search</h5><a href="/individual_search/specific_champion_wr">Specific Champion Search</a>
-Get winrates of specific champions in different queues in past 100 games, and your recent match history playing those respective champions
-<h5>Duo Checker</h5><a href="/individual_search/duo_checker">Duo Checker</a>
-Gets your winrates with another summoner in past 100 games for specified gamemodes
-{% endblock %}
+<!DOCTYPE html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&display=swap');
+    #name{
+        color: white;
+        text-align: center;
+        /*font-family: 'Leto', sans-serif;*/
+        font-family: 'Raleway', sans-serif;
+    }
+    #karangg-header{
+        color: Black;
+        text-align: center;
+       /* font-family: 'Leto', sans-serif;*/
+       font-family: 'Raleway', sans-serif;
+    }
+    .nav-bar{
+        background-color: #2491db;
+        position: fixed;
+        border-width: 0px;
+        width: 100%;
+        height: 125px;
+        margin-top: -22px;
+        margin-left: -8px;
+        z-index: 10;
+    }
+    .nav-bar a {
+        font-size: 16px;
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+    }
+    nav{
+        background-color: #2491db;
+    }
+    nav ul{
+        text-align: center;
+    }
+    nav ul li{
+        display: inline-block;
+        padding: 20px;
+        color: white;
+        font-family: Arial;
+        transition: .2s ease-out;
+    }
+    li:hover{
+        background-color: rgb(255, 123, 0);
+    }
+
+
+
+    
+    .main-text{
+        position: relative;
+        top: 125px; 
+        z-index: 5;
+    }
+
+    .karangg-info{
+        position: relative;
+        display: flex;
+        justify-content: center
+    }
+    .images{
+        width: 550px;
+        border: 0px;
+        /*
+        position: relative;
+        left: 250px;
+        bottom: 435px;
+        */
+        height: 800px;
+        overflow: hidden;
+        padding: 100px;
+        padding-top: 200px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 200px;
+        text-align: justify;
+    }
+    .top-text{
+        width: 550px;
+        border: 0px;
+        /*
+        position: relative;
+        /*left: 950px;
+        bottom: 435px;
+        */
+        height: 300px;
+        float: left;
+        padding: 100px;
+        text-align: justify;
+
+    }
+    .league-image1-reduction{
+        width: 600px;
+        /*margin: 100px 100px;*/
+        position: relative;
+    }
+    .league-image2-reduction{
+        width: 600px;
+        position: relative;
+    }
+    .league-image-shadow{
+        box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.2);
+    }
+    /*
+    .karangg-info-title{
+        font-family: 'Ubuntu Mono', monospace;
+        text-align: center;
+        font-size: 7em;
+        line-height: 0px;
+    }
+    */
+    .karangg-info-box{
+        width: 650px;
+        /* border: 1px solid #ccc;*/
+        border: 0px;
+        border-radius: 5px;
+        position: relative;
+        padding: 4px;
+        text-align: justify;
+    }
+    .karangg-brief-info-inside{
+        font-family: 'Raleway', sans-serif;
+        opacity: .7;
+        padding: 10px;
+        /*margin-bottom: 30px;*/
+    }
+    .karangg-info-inside{
+        font-family: 'Raleway', sans-serif;
+        line-height: 30px;
+        padding: 10 px;
+    }
+    .karangg-title-box{
+        position: relative;
+        width: 600px;
+        /* border: 1px solid #ccc;*/
+        border: 0px;
+        text-align: center;
+        border-radius: 5px;
+        padding: 4px;
+        animation: karangg-title-box 2s ease-out;
+    }
+    .karangg-title-inside{
+        padding: 10px;
+        font-family: 'Raleway', sans-serif;
+        /*font-family: 'Ubuntu Mono', monospace;*/
+        text-align: center;
+        font-size: 7em;
+        line-height: 0px;
+        /*margin-bottom: 30px;*/
+    }
+    @keyframes karangg-title-box {
+        0%   { 
+        transform: translateX(200%); 		
+        }
+        100% { 
+        transform: translateX(0%); 
+        }
+    }
+
+    .karangg-functions{
+        position: relative;
+        top: 500px;
+    }
+
+    .karangg-functions1{
+        position: relative;
+        bottom: 400px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .karangg-functions2{
+        position: relative;
+        bottom: 400px;
+        display: flex;
+        padding-top: 50px;
+        justify-content: center;
+    }
+    
+    .karangg-function-yourdata{
+        width: 550px;
+        border: 1px solid rgb(255, 123, 0);
+        border-width: 3px;
+        border-radius: 10px;
+        /*
+        position: relative;
+        /*left: 950px;
+        bottom: 435px;
+        */
+        height: 300px;
+        float: left;
+        padding: 20px;
+        text-align: justify;
+    }
+    .karangg-function-yourdata-inside{
+        font-family: 'Raleway', sans-serif;
+        line-height: 30px;
+        padding: 10 px;
+    }
+    .karangg-function-specific-champion{
+        width: 550px;
+        border: 1px solid rgb(255, 123, 0);
+        border-width: 3px;
+        border-radius: 10px;
+        /*
+        position: relative;
+        left: 250px;
+        bottom: 435px;
+        */
+        height: 300px;
+        overflow: hidden;
+        padding: 20px;
+        text-align: justify;
+    }
+    .karangg-function-specific-champion-inside{
+        font-family: 'Raleway', sans-serif;
+        line-height: 30px;
+        padding: 10 px;
+    }
+    #element1 {margin-right : 150px; float:left;}
+    #element2 {float:left;}
+    .function-name{
+        font-size: x-large;
+        text-align:center;
+    }
+
+
+</style>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Karan.gg</title>
+</head>
+<body>
+
+<div>
+    <div class="nav-bar">
+        <h1 id="name"> Karan Yadav</h1>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/projects">Coursework/Experience</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/resume">Résumé</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="main-text">
+    <div class="karangg-info">
+        <div class="images">
+            <div>
+                <img class="league-image1-reduction league-image-shadow" src="https://res-console.cloudinary.com/ddzsxtjah/thumbnails/transform/v1/image/upload/ZV9ibHVyOjE2Mg==/v1
+                609801036/TGVhZ3VlX29mX0xlZ2VuZHNfVE1fQ2xpZW50XzFfNF8yMDIxXzVfNDFfMDRfUE1fb28yazFp/template_primary" alt="Picture of League of Legends Gameplay">
+                <img class="league-image2-reduction league-image-shadow" src="https://res-console.cloudinary.com/ddzsxtjah/thumbnails/transform/v1/image/upload/ZV9ibHVyOjE2Mg==/v1
+                609801036/TGVhZ3VlX29mX0xlZ2VuZHNfVE1fQ2xpZW50XzFfNF8yMDIxXzVfNDFfMDRfUE1fb28yazFp/template_primary" alt="Picture of League of Legends Gameplay">
+            </div>
+        </div>
+        <div class="top-text">
+            <div class="karangg-title-box">
+                <div class="karangg-title-inside">
+                    <h3>KARAN.GG</h3>
+                </div>
+            </div>
+            <div class="karangg-info-box">
+                <div class="karangg-brief-info-inside">
+                    <p><em>KARAN.GG provides insight for League of Legend players and enhances their experience through analytics and statistics, providing players the 
+                        information to improve and win more</em></p>
+                    <hr>
+                </div>
+                <div class="karangg-info-inside">
+                    <p>League of Legemds is a 5v5 MOBA developed by Riot Games in 2009 and played by millions daily around the world. Thanks to the massive playerbase and Riot's detailed 
+                        API, websites by developers cropped up across the globe, pulling data and providing the hungry playerbase much-needed analysis. KARAN.GG is one of these, 
+                        however it has key differences that seperates it from the competition. 
+                        <br><br>
+                        Although KARAN.GG began as a simple side project, it quickly became much more than just a simple stat tracker and data puller. Using RIOT's API, 
+                        KARAN.GG pulls standard information about players, matches, champions, etc. from their League of Legends games. However, it differs in what information
+                        it presents to the player. Unlike other stat-tracking websites, KARAN.GG provides statistics and information from recent games instead of a players entire 
+                        history, giving the player more relevant information. KARAN.GG also allows the user the specify specific gamemodes and check their winrates with duo partners,
+                        something no other tracker has. With numerous other unique features, KARAN.GG is a powerful tool that helps players win more games. To test the power
+                        of this service, try some of the sample data or enter your own data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="karangg-functions">
+        <div class="karangg-functions1">
+            <div id="element1" class="karangg-function-specific-champion">
+                <div class="karangg-function-specific-champion-inside">
+                    <h4 class="function-name">Specific Champion Data</h4>
+                    <hr color="#FF7B00">
+                    <br>
+                    <p>Provides comprehensive data for specific champions you have played in various queues in your past 100 games. It also provides your recent match 
+                        history playing those respective champions.</p>
+                </div>
+            </div>
+            <div id="element2" class="karangg-function-yourdata">
+                <div class="karangg-function-yourdata-inside">
+                    <h4 class="function-name">Your Cumulative Data</h4>
+                    <hr color="#FF7B00">
+                    <br>
+                    <p>Retrives your overall data, comprising of rank, lp, and wr for various queues.</p>
+                </div>
+            </div>
+        </div>
+        <div class="karangg-functions2">
+            <div id="element1" class="karangg-function-specific-champion">
+                <div class="karangg-function-specific-champion-inside">
+                    <h4 class="function-name">Duo Checker</h4>
+                    <hr color="#FF7B00">
+                    <br>
+                    <p>Finds whether 2 of the provided player igns have played games with eachother in various queues in your past 100 games, and if so provides your recent 
+                        winrates.</p>
+                </div>
+            </div>
+            <div id="element2" class="karangg-function-yourdata">
+                <div class="karangg-function-yourdata-inside">
+                    <h4 class="function-name">Team Checker</h4>
+                    <hr color="#FF7B00">
+                    <br>
+                    <p>Enter your champ select join data ("player1 has joined party, player2 has joined party, etc.") and this function provides comprehensive data
+                        of your team, including recent winrates, recent champions played in ranked, winrates with those champions, and more. Don't worry about
+                        entering names with any extra chat from the client, this function automatically ignores it! </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <div>
+
+        <h5>Your Overall Data</h5><a href="/individual_search/your_data">Your Data</a>
+        Get your overall data, comprising of rank, lp, and wr for specified gamemodes
+        <h5>Specific Champion Search</h5><a href="/individual_search/specific_champion_wr">Specific Champion Search</a>
+        Get winrates of specific champions in different queues in past 100 games, and your recent match history playing those respective champions
+        <h5>Duo Checker</h5><a href="/individual_search/duo_checker">Duo Checker</a>
+        Gets your winrates with another summoner in past 100 games for specified gamemodes
+    </div>
+-->
+</div>
+
+
+
+</body>
+</html>
