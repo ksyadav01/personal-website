@@ -1,6 +1,400 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&display=swap');
+    #name{
+        color: white;
+        text-align: center;
+        /*font-family: 'Leto', sans-serif;*/
+        font-family: 'Raleway', sans-serif;
+    }
+    #karangg-header{
+        color: Black;
+        text-align: center;
+       /* font-family: 'Leto', sans-serif;*/
+       font-family: 'Raleway', sans-serif;
+    }
+    .nav-bar{
+        background-color: #2491db;
+        position: fixed;
+        border-width: 0px;
+        width: 100%;
+        height: 75px;
+        margin-top: -22px;
+        margin-left: -8px;
+        z-index: 10;
+    }
+    .nav-bar a {
+        font-size: 16px;
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+    }
+    nav{
+        background-color: #2491db;
+    }
+    nav ul{
+        text-align: center;
+    }
+    nav ul li{
+        display: inline-block;
+        padding: 20px;
+        color: white;
+        font-family: Arial;
+        transition: .2s ease-out;
+    }
+    li:hover{
+        background-color: rgb(255, 123, 0);
+    }
 
-{% block content %}
-<h2> Welcome to KARAN.GG </h2>
-<p> I am {{author}}, creator of this piss smurfing website</p>
-{% endblock %}
+    /*
+    .slide-container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top: 150px;
+        widows: 800px;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .image-container{
+        width: 550px;
+        height: 800px;
+        position: relative;
+        transition: left 2s;
+        -webkit-transition: left 2s;
+        -moz-transition: left 2s;
+        -o-transition: left 2s;
+        z-index: 5;
+    }
+    .slider-image{
+        float: left;
+        margin: 0px;
+        padding: 0px;
+    }
+    .button-container{
+        top: -20px;
+        position: relative;
+    }
+    .slider-button{
+        /*display: inline-block;
+        position: relative;
+        z-index: 10;
+        height: 10px;
+        width: 10px;
+        border-radius: 5px;
+        background-color: rgba(204, 30, 30, 0.671);
+    }
+    #slider-image-1:target ~ .image-container{
+        left: 0px;
+    }
+    #slider-image-2:target ~ .image-container{
+        left: -800px;
+    }
+    #slider-image-3:target ~ .image-container{
+        left: -1600px;
+    }
+    */
+
+    /*
+    html { 
+        background: url(https://res-console.cloudinary.com/ddzsxtjah/thumbnails/transform/v1/image/upload/ZV9ibHVyOjE2Mg==/v1609801036/TGVhZ3VlX29mX0xlZ2VuZHNfVE1fQ2xpZW50XzFfNF8yMDIxXzVfNDFfMDRfUE1fb28yazFp/template_primary) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      */
+    .cb-slideshow,
+    .cb-slideshow:after { 
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: 0; 
+    }
+    .cb-slideshow:after { 
+        content: '';
+        /*background: transparent url(../images/pattern.png) repeat top left; */
+    }
+    .cb-slideshow li span { 
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        color: transparent;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: none;
+        opacity: 0;
+        z-index: 0;
+        animation: imageAnimation 36s linear infinite 0s; 
+    }
+    .cb-slideshow li div { 
+        z-index: 1000;
+        position: absolute;
+        bottom: -100px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        color: #fff;
+        animation: titleAnimation 36s linear infinite 0s; 
+    }
+    .cb-slideshow li div h3 { 
+        font-family: 'Raleway', sans-serif;
+        font-size: 200px;
+        padding: 0;
+        line-height: 0px; 
+    }
+    .cb-slideshow li:nth-child(1) span { 
+        background-image: url(https://res-console.cloudinary.com/ddzsxtjah/thumbnails/transform/v1/image/upload/ZV9ibHVyOjE2Mg==/v1609801036/TGVhZ3VlX29mX0xlZ2VuZHNfVE1fQ2xpZW50XzFfNF8yMDIxXzVfNDFfMDRfUE1fb28yazFp/template_primary) 
+    }
+    .cb-slideshow li:nth-child(2) span { 
+        background-image: url(https://res.cloudinary.com/ddzsxtjah/image/upload/v1609879952/nitin_clcbju.jpg);
+        animation-delay: 6s; 
+    }
+    .cb-slideshow li:nth-child(3) span { 
+        background-image: url(https://res.cloudinary.com/ddzsxtjah/image/upload/v1609879889/noah_me_driver_station_plcmu1.jpg);
+        animation-delay: 12s; 
+    }
+    .cb-slideshow li:nth-child(4) span { 
+        background-image: url(https://res.cloudinary.com/ddzsxtjah/image/upload/v1609879889/me_driving_at_driver_station_a4jh4x.jpg);
+        animation-delay: 18s; 
+    }
+    .cb-slideshow li:nth-child(5) span { 
+        background-image: url(https://res.cloudinary.com/ddzsxtjah/image/upload/v1609879889/robotics_photo_uybghg.jpg);
+        animation-delay: 24s; 
+    }
+    .cb-slideshow li:nth-child(6) span { 
+        background-image: url(https://res.cloudinary.com/ddzsxtjah/image/upload/v1609881345/jack_f3tmbg.jpg);
+        animation-delay: 30s; 
+    }
+
+    .cb-slideshow li:nth-child(2) div { 
+        animation-delay: 6s; 
+    }
+    .cb-slideshow li:nth-child(3) div { 
+        animation-delay: 12s; 
+    }
+    .cb-slideshow li:nth-child(4) div { 
+        animation-delay: 18s; 
+    }
+    .cb-slideshow li:nth-child(5) div { 
+        animation-delay: 24s; 
+    }
+    .cb-slideshow li:nth-child(6) div { 
+        animation-delay: 30s; 
+    }
+
+    @keyframes imageAnimation { 
+        0% { opacity: 0; animation-timing-function: ease-in; }
+        8% { opacity: 1; animation-timing-function: ease-out; }
+        17% { opacity: 1 }
+        25% { opacity: 0 }
+        100% { opacity: 0 }
+    }
+    @keyframes titleAnimation { 
+        0% { opacity: 0 }
+        8% { opacity: 1 }
+        17% { opacity: 1 }
+        19% { opacity: 0 }
+        100% { opacity: 0 }
+    }
+    .no-cssanimations .cb-slideshow li span{
+        opacity: 1;
+    }
+    @media screen and (max-width: 1140px) { 
+        .cb-slideshow li div h3 { font-size: 140px }
+    }
+    @media screen and (max-width: 600px) { 
+        .cb-slideshow li div h3 { font-size: 80px }
+    }
+
+
+
+   
+    .info{
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    .info-text{
+        width: 900px;
+        border: 1px solid green;
+        border-width:5px;
+        /*
+        position: relative;
+        /*left: 950px;
+        bottom: 435px;
+        */
+        height: 300px;
+        float: left;
+        padding-left: 1250px;
+        padding-top: 125px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        text-align: justify;
+
+    }
+    .info-inner-text-box{
+        width: 500px;
+        /* border: 1px solid #ccc;*/
+        height: 700px;
+        border: 1px solid green;
+        border-radius: 5px;
+        background-color: lightgray;
+        opacity: .45;
+        position: relative;
+        text-align: justify;
+    }
+    .info-inner-text-box-photo{
+        width: 200px;
+        position: relative;
+        border: 1px solid green;
+        border-radius: 300px;
+        top: 0px;
+        /*
+        top: 200px;
+        left: 1415px;*/
+    }
+    .info-inner-text-box-text{
+        width: 500px;
+        border: 1px solid green;
+        opacity: 1;
+        position: relative;
+        text-align: justify;
+        font-family: 'Raleway', sans-serif;
+        font-size: 15px;
+        top: -400px;
+    }
+    .info-inner-text-box-name{
+        width: 450px;
+        border: 1px solid green;
+        height: 100px;
+        opacity: 1;
+        position: relative;
+        text-align: center;
+        left: 25px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 50px;
+        line-height: 3px;
+        top: -400px;
+    }
+
+</style>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+<div>
+    <div class="nav-bar">
+        <!--
+        <h1 id="name"> Karan Yadav</h1>-->
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/projects">Coursework/Experience</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/resume">Résumé</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div>
+    <ul class="cb-slideshow">
+        <li>
+            <span>Image 01</span>
+            <div>
+                <h3>p.a.s.s.i.o.n</h3>
+            </div>
+        </li>
+        <li>
+            <span>Image 02</span>
+            <div>
+                <h3>I.N.G.E.N.U.I.T.Y</h3>
+            </div>
+        </li>
+        <li>
+            <span>Image 03</span>
+            <div>
+                <h3>I.N.N.O.V.A.T.I.O.N</h3>
+            </div>
+        </li>
+        <li>
+            <span>Image 04</span>
+            <div>
+                <h3>robotics</h3>
+            </div>
+        </li>
+        <li>
+            <span>Image 05</span>
+            <div>
+                <h3>robotics</h3>
+            </div>
+        </li>
+        <li>
+            <span>Image 06</span>
+            <div>
+                <h3>D.U.M.B.A.S.S</h3>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="info">
+    <div class="info-text">
+        <div class="info-inner-text-box">
+            <div>
+                <img class="info-inner-text-box-photo" src="https://res.cloudinary.com/ddzsxtjah/image/upload/v1609889004/home_page_picture_zw1ykw.jpg" alt="Picture of me">
+            </div>
+        </div>
+        <div class="info-inner-text-box-name">
+            Karan Yadav
+            <hr>
+        </div>
+        <div class="info-inner-text-box-text">
+            I am a second-year student at Stony Brook University studying Computer Science and Applied Mathematics
+        </div>
+    </div>
+</div>
+<!--
+<div class="slide-container">
+    <span id="slider-image-1"></span>
+    <span id="slider-image-2"></span>
+    <span id="slider-image-3"></span>
+    <div class="image-container">
+        <img src="https://res-console.cloudinary.com/ddzsxtjah/thumbnails/transform/v1/image/upload/ZV9ibHVyOjE2Mg==/v1
+        609801036/TGVhZ3VlX29mX0xlZ2VuZHNfVE1fQ2xpZW50XzFfNF8yMDIxXzVfNDFfMDRfUE1fb28yazFp/template_primary" class="slider-image">
+        <img src="https://res-console.cloudinary.com/ddzsxtjah/thumbnails/transform/v1/image/upload/ZV9ibHVyOjE2Mg==/v1
+        609801036/TGVhZ3VlX29mX0xlZ2VuZHNfVE1fQ2xpZW50XzFfNF8yMDIxXzVfNDFfMDRfUE1fb28yazFp/template_primary" class="slider-image">
+        <img src="https://res-console.cloudinary.com/ddzsxtjah/thumbnails/transform/v1/image/upload/ZV9ibHVyOjE2Mg==/v1
+        609801036/TGVhZ3VlX29mX0xlZ2VuZHNfVE1fQ2xpZW50XzFfNF8yMDIxXzVfNDFfMDRfUE1fb28yazFp/template_primary" class="slider-image">
+    </div>
+    <div class="button-container">
+        <a href="#slider-image-1" class="slider-button"></a>
+        <a href="#slider-image-2" class="slider-button"></a>
+        <a href="#slider-image-3" class="slider-button"></a>
+    </div>
+    
+</div>
+-->
+<div>
+</div>
+
+
+
+</body>
+</html>
