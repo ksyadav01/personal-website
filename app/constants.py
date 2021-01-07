@@ -1,6 +1,7 @@
 from flask import Flask
 app = Flask(__name__)
 API_KEY = 'RGAPI-c6e4e7be-124e-46e2-bab2-de3ac3369699'
+LAST_API_KEY = 'ae3471fe6f952ffb40c99ad83bba5596'
 #
 # watcher = LolWatcher(API_KEY)
 # my_name = 'Notorious YNO'  # input("Enter your name:")

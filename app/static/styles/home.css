@@ -142,7 +142,7 @@ html {
 .cb-slideshow li div { 
     z-index: 1000;
     position: absolute;
-    bottom: -100px;
+    bottom: -60px;
     left: 0px;
     width: 100%;
     text-align: center;
@@ -152,15 +152,15 @@ html {
 }
 .cb-slideshow li div h3 { 
     font-family: 'Raleway', sans-serif;
-    font-size: 200px;
+    font-size: 150px;
     padding: 0;
     line-height: 0px; 
 }
 .cb-slideshow li:nth-child(1) span { 
-    background-image: url(https://res-console.cloudinary.com/ddzsxtjah/thumbnails/transform/v1/image/upload/ZV9ibHVyOjE2Mg==/v1609801036/TGVhZ3VlX29mX0xlZ2VuZHNfVE1fQ2xpZW50XzFfNF8yMDIxXzVfNDFfMDRfUE1fb28yazFp/template_primary) 
+    background-image: url(http://access.bgeraser.com:8889/results/QWOAsGxh.png) 
 }
 .cb-slideshow li:nth-child(2) span { 
-    background-image: url(https://res.cloudinary.com/ddzsxtjah/image/upload/v1609879952/nitin_clcbju.jpg);
+    background-image: url(https://res.cloudinary.com/ddzsxtjah/image/upload/v1609955337/combo_image_hs1zie.jpg);
     animation-delay: 6s; 
 }
 .cb-slideshow li:nth-child(3) span { 
@@ -247,6 +247,7 @@ html {
 
 }
 .info-inner-text-box{
+    position: fixed;
     width: 500px;
     /* border: 1px solid #ccc;*/
     height: 700px;
@@ -296,6 +297,333 @@ html {
     line-height: 3px;
     margin-top: 50px;
 }
+#github-background{
+    width: 32px;
+    height: 30px;
+    justify-content: center;
+    border: 1px;
+    border-radius: 10px;
+    background-color: tan;
+    position: relative;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    left: 150px;
+}
+.info-inner-text-box-links{
+    width: 450px;
+    position: relative;
+    text-align: justify;
+    justify-content: center;
+    border: 1px;
+    border-color: green;
+    padding-top: 11px;
+    padding-bottom: 0px;
+}
+#github-background:hover{
+    background-color: rgb(210, 180, 140, 0.55);
+}
+#linkedin-image{
+    width: 30px;
+    height: 30px;
+}
+#linkedin-background{
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    border: 1px;
+    border-radius: 10px;
+    background-color: tan;
+    position: relative;
+    padding: 21px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    left: 251px;
+    top: -33.5px;
+}
+
+#linkedin-background:hover{
+    background-color: rgb(210, 180, 140, 0.55);
+}
+
+.current-box{
+    position: fixed;
+    left: 45px;
+    top: 533px;
+    width: 500px;
+    border: 0px;
+    border-width:5px;
+    /*
+    position: relative;
+    /*left: 950px;
+    bottom: 435px;
+    */
+    height: 300px;
+    float: left;
+    padding-left: 50px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    text-align: justify;
+
+}
+.current-grey{
+    width: 500px;
+    border: 1px solid rgb(211,211,211);
+    height: 300px;
+    border-radius: 5px;
+    background-color: rgb(211,211,211, .65);
+    position: relative;
+    text-align: justify;
+}
+.current-title{
+    width:450px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    padding-top:20px;
+    margin-left: 25px;
+    line-height: 10px;
+}
+.current-text{
+    width:440px;
+    height:500px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: normal;
+    margin-top: 0px;
+    margin-left: 25px;
+    line-height: 30px;
+}
+.current-lists{
+    display: inline-block;
+    float: left;
+    position: relative;
+    top: -55px;
+}
+.current-list{
+    margin-left: 20px;
+    margin-right: 0px;
+    padding: 0;
+    list-style: none;
+}
+
+.current-list li{
+    float: left; 
+    display: inline-block;
+}
+ul.current-list li:hover{
+    background-color: rgb(211,211,211, 0);
+}
+ul.current-list li a{
+    color: white;
+}
+
+#sbu-logo{
+    width: 20px;
+    height: 20px;
+    margin-bottom: -5px;
+}
+#code-logo{
+    width: 20px;
+    height: 20px;
+    margin-bottom: -5px;
+}
+#python-logo{
+    width: 20px;
+    height: 20px;
+    margin-bottom: -5px;
+}
+#tv-icon{
+    width: 20px;
+    height: 20px;
+    margin-bottom: -5px;
+}
+#music-icon{
+    width: 20px;
+    height: 20px;
+    margin-bottom: -5px;
+}
+
+.java-logo{
+    float: left;
+    width: 44px;
+    height: 15px;
+    justify-content: center;
+    border: 2px solid rgb(255, 123, 0);
+    border-radius: 10px;
+    background-color: rgb(231, 231, 231);
+    position: relative;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    left: 17px;
+    font-size: small;
+}
+#java-image{
+    width: 15px;
+    height: 15px;
+}
+#java-text-raise{
+    position: relative;
+    color: #2491db;
+    top: -19px;
+    left: 18px;
+}
+
+
+.python-logo{
+    float: left;
+    width: 55px;
+    height: 15px;
+    justify-content: center;
+    border: 2px solid rgb(255, 123, 0);
+    border-radius: 10px;
+    background-color: rgb(231, 231, 231);
+    position: relative;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    left: 34px;
+    font-size: small;
+}
+#python-image{
+    width: 15px;
+    height: 15px;
+}
+#python-text-raise{
+    position: relative;
+    color: #2491db;
+    top: -19px;
+    left: 17px;
+}
+
+
+.html-logo{
+    float: left;
+    width: 44px;
+    height: 15px;
+    justify-content: center;
+    border: 2px solid rgb(255, 123, 0);
+    border-radius: 10px;
+    background-color: rgb(231, 231, 231);
+    position: relative;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    left: 51px;
+    font-size: small;
+}
+#html-image{
+    width: 15px;
+    height: 15px;
+}
+#html-text-raise{
+    position: relative;
+    color: #2491db;
+    top: -19px;
+    left: 17px;
+}
+
+.css-logo{
+    float: left;
+    width: 38px;
+    height: 15px;
+    justify-content: center;
+    border: 2px solid rgb(255, 123, 0);
+    border-radius: 10px;
+    background-color: rgb(231, 231, 231);
+    position: relative;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    left: 68px;
+    font-size: small;
+}
+#css-image{
+    width: 15px;
+    height: 15px;
+}
+#css-text-raise{
+    position: relative;
+    color: #2491db;
+    top: -19px;
+    left: 17px;
+}
+
+
+.assembly-logo{
+    float: left;
+    width: 65px;
+    height: 15px;
+    justify-content: center;
+    border: 2px solid rgb(255, 123, 0);
+    border-radius: 10px;
+    background-color: rgb(231, 231, 231);
+    position: relative;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    left: 85px;
+    font-size: small;
+}
+#assembly-image{
+    width: 15px;
+    height: 15px;
+}
+#assembly-text-raise{
+    position: relative;
+    color: #2491db;
+    top: -19px;
+    left: 17px;
+}
+
+.ocaml-logo{
+    float: left;
+    width: 50px;
+    height: 15px;
+    justify-content: center;
+    border: 2px solid rgb(255, 123, 0);
+    border-radius: 10px;
+    background-color: rgb(231, 231, 231);
+    position: relative;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    left: 102px;
+    font-size: small;
+}
+#ocaml-image{
+    width: 15px;
+    height: 15px;
+}
+#ocaml-text-raise{
+    position: relative;
+    color: #2491db;
+    top: -19px;
+    left: 17px;
+}
+/*
+.github-background a:link{
+    background-color: tan;
+}
+.github-background a:visited{
+    background-color: green;
+}
+.github-background a:hover{
+    background-color: green 0.5px;
+}
+.github-background a:hover{
+    background-color: tan 0.5px;
+}
+*/
+
 a{
     color: white;
     text-decoration: none;

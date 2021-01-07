@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/home.css') }}">
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
@@ -33,7 +33,7 @@
         <li>
             <span>Image 02</span>
             <div>
-                <h3>A.U.T.I.S.M</h3>
+                <h3>P.A.S.S.I.O.N</h3>
             </div>
         </li>
         <li>
@@ -76,7 +76,75 @@
                 I am currently a second-year student attending Stony Brook University studying Computer Science and Applied Mathematics.
                 Recently, I've been working on a stat visualiser for the popular MOBA League of Legends using primarily Python. At the moment
                 I'm seeking a summer software engineering internship position. If you think I'm a good fit, feel free to 
-                <a color: "white" href="/contact">contact</a> me.
+                <a href="/contact">contact</a> me.
+            </div>
+            <div class="info-inner-text-box-links">
+                <div class="github-background">
+                    <a id="github-background" href="https://github.com/ksyadav01">
+                        <img alt="Github Logo" src="https://res.cloudinary.com/ddzsxtjah/image/upload/v1609956775/GitHub-Mark-32px_eveksr.png">
+                    </a>
+                </div>
+                <div>
+                    <a id="linkedin-background" href="https://www.linkedin.com/in/karansyadav/">
+                        <img id="linkedin-image" alt="Linkedin Logo" src="https://res.cloudinary.com/ddzsxtjah/image/upload/e_blackwhite/v1609960221/LI-In-Bug_ftk1or.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="current-box">
+        <div class="current-grey">
+            <div class="current-title">
+                Currently
+                <hr>
+            </div>
+            <div class="current-text">
+                <ul class="current-list">
+                    <li class="current-list"> <img id="sbu-logo" alt="sbu-logo" src="https://res.cloudinary.com/ddzsxtjah/image/upload/v1609967671/imageedit_2_8319969599_fzbm0x.png" >
+                        CS and AMS @ Stony Brook
+                    </li>
+                    <li class="current-list"> <img id="code-logo" alt= "coding icon" src="https://res.cloudinary.com/ddzsxtjah/image/upload/e_blackwhite/v1609967944/html_icon_qcbzib.png" >
+                        Working on <a href="/projects/karan.gg">KARAN.GG</a>
+                    </li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li class="current-list"> <img id="python-logo" alt= "coding icon" src="https://img.icons8.com/ios/50/000000/python.png" >
+                        Learning Python
+                    </li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li class="current-list"> <img id="tv-icon" alt= "tv icon" src="https://img.icons8.com/metro/26/000000/retro-tv.png">
+                        Watching <a href="https://www.netflix.com/title/80057918">Lucifer</a>
+                    </li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li class="current-list"> <img id="music-icon" alt= "music icon"src="https://img.icons8.com/ios-glyphs/30/000000/audio-wave--v2.png">
+                        Listening to <strong><em>{{song}}</em></strong> by <strong><em>{{artist}}</em></strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="current-lists" >
+            <div class="java-logo">
+                <img id="java-image" alt="Java Logo" src="https://img.icons8.com/color/50/000000/java-coffee-cup-logo.png">
+                <div id="java-text-raise">java</div>
+            </div>
+            <div class="python-logo">
+                <img id="python-image" alt="Python Logo" src="https://img.icons8.com/color/50/000000/python.png">
+                <div id="python-text-raise">python</div>
+            </div>
+            <div class="html-logo">
+                <img id="html-image" alt="HTML Logo" src="https://img.icons8.com/nolan/50/html.png">
+                <div id="html-text-raise">html</div>
+            </div>
+            <div class="css-logo">
+                <img id="css-image" alt="CSS Logo" src="https://img.icons8.com/small/50/000000/css.png">
+                <div id="css-text-raise">css</div>
+            </div>
+            <div class="assembly-logo">
+                <img id="assembly-image" alt="CSS Logo" src="https://res.cloudinary.com/ddzsxtjah/image/upload/v1609974678/assembly_icon_jh4jyr.png">
+                <div id="assembly-text-raise">assembly</div>
+            </div>
+            <div class="ocaml-logo">
+                <img id="ocaml-image" alt="OCaml Logo" src="https://github.com/ocaml/ocaml-logo/blob/master/Colour/JPEG/colour-icon.jpg?raw=true">
+                <div id="ocaml-text-raise">ocaml</div>
             </div>
         </div>
     </div>

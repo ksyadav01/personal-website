@@ -3,7 +3,8 @@ from flask import Flask, render_template, request, url_for
 from werkzeug.utils import redirect
 # import individual_search
 # import individual_search
-from . import individual_search
+from app import individual_search
+from app import song
 from app import app
 # app = Flask(__name__)
 # app.config['SECRET_KEY'] = 'test'
@@ -13,6 +14,7 @@ game_list = ""
 champion = ""
 match_history_list = ""
 individual_search_type = ""
+
 stats = []
 
 
@@ -24,10 +26,12 @@ def about():
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html')
+    song_data = song.getSong()
+    return render_template('home.html', artist=song_data.json()['recenttracks']['track'][0]['artist']['#text'],
+                           song=song_data.json()['recenttracks']['track'][0]['name'])
 
 
-@app.route('/projects/karan.gg)
+@app.route('/projects/karan.gg')
 def karangg():
     return render_template('karangg.html')
 
