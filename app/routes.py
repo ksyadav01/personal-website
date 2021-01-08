@@ -30,7 +30,16 @@ def home():
     return render_template('home.html', artist=song_data.json()['recenttracks']['track'][0]['artist']['#text'],
                            song=song_data.json()['recenttracks']['track'][0]['name'])
 
+@app.route('/coursework_experience')
+def coursework_experience():
+    return render_template('experience.html')
 
+
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
+
+    
 @app.route('/projects/karan.gg')
 def karangg():
     return render_template('karangg.html')

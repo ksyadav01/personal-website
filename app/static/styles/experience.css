@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&display=swap');
+#name{
+    color: white;
+    text-align: center;
+    /*font-family: 'Leto', sans-serif;*/
+    font-family: 'Raleway', sans-serif;
+}
+.nav-bar{
+    background-color: #2491db;
+    position: fixed;
+    border-width: 0px;
+    width: 100%;
+    height: 75px;
+    margin-top: -22px;
+    margin-left: -8px;
+    z-index: 10;
+}
+.nav-bar a {
+    font-size: 16px;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+}
+nav{
+    background-color: #2491db;
+}
+nav ul{
+    text-align: center;
+}
+ul{
+    list-style:none;
+}
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+    color: white;
+    font-family: Arial;
+    transition: .2s ease-out;
+}
+nav li:hover{
+    background-color: rgb(255, 123, 0);
+}
+.main-box{
+    display: block;
+    width: 100%;
+    position: relative;
+    top: 300px;
+}
+.content-box{
+    display: flex;
+}
+.main-header{
+    width: 99.5%;
+    position: absolute;
+    top: 75px;
+
+}
+.main-header h1{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 65px;
+    color:rgb(255, 123, 0);
+    /*text-shadow: 1px 1px rgb(255, 123, 0);*/
+}
+
+.left-box{
+
+    width: 100%;
+}
+.right-box{
+    border: 0px;
+    width: 100%;
+}
+.relevant-coursework-box{
+    background-color: rgb(211,211,211, .65);
+    border: 2px solid rgb(255, 123, 0);
+    border-radius: 10px;
+    width: 600px;
+    height: 300px;
+    margin-left: 100px;
+    
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: normal;
+}
+.relevant-coursework-box h3{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+}
+.cse li{
+    list-style-image: url(https://img.icons8.com/color/20/000000/google-code.png);
+    line-height: 20px;
+    margin-left: 20px;
+}
+.ams li{
+    list-style-image: url(https://img.icons8.com/metro/16/000000/math.png);
+    line-height: 23px;
+    margin-left: 20px;
+}
+.future-coursework-box{
+    background-color: rgb(211,211,211, .65);
+    border: 2px solid rgb(255, 123, 0);
+    border-radius: 10px;
+    width: 600px;
+    height: 250px;
+    margin-left: 100px;
+    margin-top: 60px;
+    
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: normal;
+}
+.future-coursework-box h3{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+}
+
+
+.experience-box{
+    background-color: rgb(211,211,211, .65);
+    border: 2px solid rgb(255, 123, 0);
+    border-radius: 10px;
+    width: 600px;
+    height: 500px;
+    margin-left: 210px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: normal;
+}
+.experience-box h3{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+}
+.gcom-box{
+    width:575px;
+    margin-left: 12.5px;
+    margin-top: 50px;
+    border: 2px solid #2491db;
+    border-radius: 10px;
+}
+.gcom{
+    margin-top: -10px;
+    text-align: justify;
+    padding: 12.5px;
+}
+.gcom-box h4{
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    line-height: 0px;
+    padding: 12.5px;
+}
+.gcom a{
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+    line-height: 0px;
+    color: rgb(255, 123, 0);
+
+}
