@@ -224,26 +224,41 @@ html {
 
 
 .info{
-    position: relative;
     display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    border: 1px solid red;
+    height: 820px;
+    padding: 0px;
+    margin: 0px;
     justify-content: center;
+    align-items: flex-end;
+}
+.gap{
+    order: 1;
+    width: 200px;
+    text-align: justify;
+    position: relative;
+}
+.space{
+    order: 3;
+    width: 700px;
+    text-align: justify;
+    position: relative;
 }
 .info-text{
+    order: 5;
     width: 900px;
-    border: 0px;
-    border-width:5px;
     /*
     position: relative;
     /*left: 950px;
     bottom: 435px;
     */
-    height: 300px;
-    float: left;
-    padding-left: 1250px;
-    padding-top: 125px;
-    padding-right: 0px;
-    padding-bottom: 0px;
+    height: 700px;
     text-align: justify;
+    margin-top: 100px;
 
 }
 .info-inner-text-box{
@@ -254,7 +269,6 @@ html {
     border: 0px;
     border-radius: 5px;
     background-color: rgb(211,211,211, .65);
-    position: relative;
     text-align: justify;
 }
 .info-inner-text-box-photo{
@@ -347,33 +361,31 @@ html {
 }
 
 .current-box{
+    
+    order: 2;
+    /*
     position: fixed;
     left: 45px;
     top: 533px;
+    */
     width: 500px;
-    border: 0px;
-    border-width:5px;
     /*
     position: relative;
     /*left: 950px;
     bottom: 435px;
     */
-    height: 300px;
-    float: left;
-    padding-left: 50px;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
+    height: 200px;
+    position: relative;
+    top: -100px;
     text-align: justify;
 
 }
 .current-grey{
     width: 500px;
-    border: 1px solid rgb(211,211,211);
     height: 300px;
     border-radius: 5px;
     background-color: rgb(211,211,211, .65);
-    position: relative;
+    position: fixed;
     text-align: justify;
 }
 .current-title{
@@ -457,8 +469,8 @@ ul.current-list li a{
     padding: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
-    position: relative;
     left: 17px;
+    top: 300px;
     font-size: small;
 }
 #java-image{
@@ -487,6 +499,7 @@ ul.current-list li a{
     padding-bottom: 10px;
     position: relative;
     left: 34px;
+    top: 300px;
     font-size: small;
 }
 #python-image{
@@ -515,6 +528,7 @@ ul.current-list li a{
     padding-bottom: 10px;
     position: relative;
     left: 51px;
+    top: 300px;
     font-size: small;
 }
 #html-image{
@@ -542,6 +556,7 @@ ul.current-list li a{
     padding-bottom: 10px;
     position: relative;
     left: 68px;
+    top: 300px;
     font-size: small;
 }
 #css-image{
@@ -570,6 +585,7 @@ ul.current-list li a{
     padding-bottom: 10px;
     position: relative;
     left: 85px;
+    top: 300px;
     font-size: small;
 }
 #assembly-image{
@@ -597,6 +613,7 @@ ul.current-list li a{
     padding-bottom: 10px;
     position: relative;
     left: 102px;
+    top: 300px;
     font-size: small;
 }
 #ocaml-image{
