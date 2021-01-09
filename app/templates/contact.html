@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/contact.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/D>
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/experience.css') }}"/>
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
@@ -22,9 +25,112 @@
         </nav>
     </div>
 </div>
-<div class="main-header">
-    <h1>Contact</h1>
-</div>
-<div class="container">
+<!--<div class="underbar-nav"></div>-->
 
+<div class="main-header">
+    <h1><Strong>Contact</Strong></h1>
 </div>
+<div class="main-box">
+    <div class="content-box">
+        <div class="form-holder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                    </div>
+                    <div class="col-sm bg-whit ">
+                        <form method="post" autocomplete="off" name="google-sheet">
+                            <h4>Contact</h4>
+                            <h5>Contsadadasadssdasaddsdsadsasdaadact</h5>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" required>
+                                <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                            </div>
+                            <div class="form-group">
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter phone">
+                                <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" placeholder="Enter your message" required></textarea>
+                                <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Submit</button><br><br>
+                        </form>
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="socials-box"> 
+                <div class="socials-image-align">
+                    <img class="socials-image" alt="Picture of Me" src="https://github.com/ksyadav01/image-holder/blob/main/images/20210108232706.png?raw=true">
+                </div>
+                <div class="socials-name">
+                    Karan Yadav
+                </div>
+                <div class="socials-icons">
+                    <div>
+                        <a id="facebook-background" href="https://www.facebook.com/profile.php?id=100027389325341">
+                            <img alt="Facebook Logo" src="https://github.com/ksyadav01/image-holder/blob/main/images/icons8-facebook-30.png?raw=true">
+                        </a>
+                    </div>
+                    <div>
+                        <a id="linkedin-background" href="https://www.linkedin.com/in/karansyadav/">
+                            <img id="linkedin-image" alt="Linkedin Logo" src="https://github.com/ksyadav01/image-holder/blob/main/images/icons8-linkedin-30%20(1).png?raw=true">
+                        </a>
+                    </div>
+                    <div>
+                        <a id="instagram-background" href="https://www.instagram.com/karansyadav01/">
+                            <img alt="Instragram Logo" src="https://github.com/ksyadav01/image-holder/blob/main/images/icons8-instagram-30.png?raw=true">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text">
+                <div class=contact-main>
+                    I'd Love To Connect With You.
+                </div>
+                
+                <!--
+                <h2><strong>Email:</strong></h2> &nbsp; ksyadav01@outlook.com <br>
+                <h2><strong>Phone Number:</strong></h2> &nbsp;(518)-334-5038 -->
+                <div class="contact-icon-holder">
+                    <div class="contact-email">
+                        <img src="https://img.icons8.com/ios-filled/90/000000/new-post.png"/>
+                        <br>ksyadav01@outlook.com
+                    </div>
+                    <div class="contact-phone">
+                        <img src="https://img.icons8.com/ios-glyphs/90/000000/iphone.png"/>
+                        <br>(518)-334-5038
+                    </div>
+                    <div class="contact-linkedin">
+                        <img src="https://img.icons8.com/ios-glyphs/90/000000/linkedin.png"/>
+                        <br><a href="https://www.linkedin.com/in/karansyadav/">Connect </a> on linkedin
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwgr5fPix7rtK4okXM4EkzRPAS1AkXrkG0aSYDzphgQb-tTZnZf/exec'
+        const form = document.forms['google-sheet']
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks for contacting me! I will be getting back to you as soon as possible."))
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>

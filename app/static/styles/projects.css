@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&display=swap');
 
 body{
-    background-color: rgb(31, 40, 51, .90);
+    background-color: #568259;
 }
 .nav-bar{
     background-color: #1F2833;
@@ -17,7 +17,7 @@ body{
 }
 .nav-bar a {
     font-size: 16px;
-    color: #66FCF1;
+    color: white;
     padding: 14px 16px;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
@@ -34,7 +34,7 @@ ul{
 nav ul li{
     display: inline-block;
     padding: 20px;
-    color: #66FCF1;
+    color: white;
     font-family: Arial;
     transition: .2s ease-out;
 }

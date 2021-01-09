@@ -13,25 +13,30 @@
     /* font-family: 'Leto', sans-serif;*/
     font-family: 'Raleway', sans-serif;
 }
+body{
+    background-color: #568259;
+}
 .nav-bar{
-    background-color: #2491db;
+    /*background-color: #2491db;*/
+    background-color: #1F2833;
     position: fixed;
     border-width: 0px;
     width: 100%;
-    height: 75px;
-    margin-top: -22px;
-    margin-left: -8px;
+    height: 52px;
+    top: -1px;
     z-index: 10;
 }
 .nav-bar a {
     font-size: 16px;
     color: white;
+    /*color: white;*/
     padding: 14px 16px;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
 }
 nav{
-    background-color: #2491db;
+    /*background-color: #2491db;*/
+    background-color: #1F2833;
 }
 nav ul{
     text-align: center;
@@ -42,23 +47,236 @@ ul{
 nav ul li{
     display: inline-block;
     padding: 20px;
-    color: white;
+    /*color: white;*/
+    color: #66FCF1;
     font-family: Arial;
     transition: .2s ease-out;
 }
-li:hover{
-    background-color: rgb(255, 123, 0);
+nav ul li:hover{
+    /*background-color: rgb(255, 123, 0);*/
+    background-color: #0b0c10;
 }
+.underbar-nav{
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    height: 0px;
+    border: 1px solid #0B0C10;
+    z-index: 2000;
+}
+
 .main-header{
     width: 99.5%;
     position: absolute;
-    top: 75px;
+    top: 100px;
 
 }
 .main-header h1{
     text-align: center;
     font-family: 'Raleway', sans-serif;
-    font-size: 65px;
-    color:rgb(255, 123, 0);
+    font-size: 67px;
+    color: #1F2833;
     /*text-shadow: 1px 1px rgb(255, 123, 0);*/
+}
+
+
+.main-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.content-box{
+    width: 1800px;
+    height: 400px;
+    border-width:5px;
+    margin-top: 400px;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    color: white;
+}
+.socials-image-align{
+    text-align: center;
+}
+.socials-image{
+    margin-top: 10px;
+    width:200px;
+    height: 200px;
+    border: 3px solid #45a29E;
+    border-radius: 300px;
+}
+.socials-box{
+    position: fixed;
+    width: 300px;
+    height: 400px;
+    background-color: #1F2833;
+    margin-left: -125px;
+    margin-top: -200px;
+    box-shadow: 4px 7px 10px Black;
+}
+.socials-name{
+    width: 300px;
+    height: 75px;
+    font-size: 40px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    vertical-align: center;
+}
+.socials-icons{
+    width: 300px;
+    height: 100px;
+    text-align: justify;
+    justify-content: center;
+    border-color: 2px solid green;
+    padding-bottom: 0px;
+}
+#linkedin-image{
+    width: 30px;
+    height: 30px;
+}
+#linkedin-background{
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    border: 2px solid #C5C6C7;
+    border-radius: 10px;
+    background-color: #45A29E;
+    position: relative;
+    padding: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    left: 112px;
+    top: 16px;
+}
+
+#linkedin-background:hover{
+    background-color: #0B0C10 /*rgb(31, 40, 51, 0.65);*/
+}
+
+#facebook-background{
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    border: 2px solid #C5C6C7;
+    border-radius: 10px;
+    background-color: #45A29E;
+    position: relative;
+    padding: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    top:45px;
+    left:22px;
+}
+#facebook-background:hover{
+    background-color: #0B0C10 /*rgb(31, 40, 51, 0.65);*/
+}
+
+#instagram-background{
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    border: 2px solid #C5C6C7;
+    border-radius: 10px;
+    background-color: #45A29E;
+    position: relative;
+    padding: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    left: 204px;
+    top: -13px;
+}
+#instagram-background:hover{
+    background-color: #0B0C10 /*rgb(31, 40, 51, 0.65);*/
+}
+
+
+
+.info{
+    background-color: #45A29E;
+    border: 2px solid #C5C6C7;
+    border-radius: 10px;
+    width: 800px;
+    height: 350px;
+    color: white;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: normal;
+    display: inline-block;
+    order: 1;
+}
+.text{
+    margin-left: 210px;
+    margin-top: 50px;
+    border: 2px solid #C5C6C7;
+    border-radius: 10px;
+    width: 550px;
+    height: 250px;
+}
+.contact-icon-holder{
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.contact-email{
+    text-align: center;
+}
+.contact-phone{
+    margin-top: -10px;
+    text-align: center;
+    line-height: 40px;
+}
+.contact-linkedin{
+    margin-top: 0px;
+    text-align: center;
+    line-height: 20px;
+}
+.contact-linkedin a{
+    color: white;
+    text-decoration: underline;
+}
+.form-holder{
+    order: 2;
+}
+.info h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 19px;
+    color: #1F2833;
+    display: inline;
+}
+.container{ 
+    width: 600px;
+    margin-left: 100px;
+    border: 2px solid #C5C6C7;
+    background-color: #45A29E;
+    border-radius: 10px;
+}
+.container h4{
+    content: "\a";
+    white-space: pre;
+}
+.container h5{
+    color: #45A29E;
+    content: "\a";
+    white-space: pre;
+}
+.contact-main{
+    font-size: xx-large;
+    text-align: center;
+}
+#ubuntu-font h6{
+    font-family: 'Ubuntu', sans-serif;
+}
+.col-sm{
+    width: 500px;
+}
+#email::after{
+    content: "\a";
+    white-space: pre;
+}
+#number::after{
+    content: "\a";
+    white-space: pre;
 }
