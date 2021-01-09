@@ -91,6 +91,75 @@ nav li:hover{
     font-size: normal;
 }
 
+.karanwebsite-text-box{
+    margin-top: -460px;
+    width: 575px;
+    height: 350px;
+    margin-left: 560px;
+    line-height: 30px;
+    text-align: justify;
+}
+.karanwebsite-text-box h2{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    color: #1F2833;
+}
+.karanwebsite-text-box hr{
+    height: 1px;
+    background-color: #1F2833;
+    border: none;
+}
+.karanwebsite-text-box a{
+    color: #1F2833;
+}
+.karanwebsite-image{
+    position: relative;
+    top: 75px;
+    transform: translateX(100px); 
+    margin-top: 71px;
+    margin-left: 100px;
+    animation: homepic 2s ease-out;
+}
+
+.karanwebsite-image1{
+    position: relative;
+    top: -75px;
+    transform: translateY(-200px); 
+    margin-top: 61px;
+    margin-left: 50px;
+    animation: exppic 2s ease-out;
+}
+@keyframes homepic {
+    0%   { 
+    transform: translateX(0px); 
+    }
+    100% { 
+    transform: translateX(100px); 
+    }
+}
+@keyframes exppic {
+    0%   { 
+    transform: translateY(0px); 
+    }
+    100% { 
+    transform: translateY(-200px); 
+    }
+}
+.homepic{
+    
+    position: relative;
+    border: 2px solid #C5C6C7;
+    border-radius: 10px;
+}
+.exppic{
+    
+    position: relative;
+    border: 2px solid #C5C6C7;
+    border-radius: 10px;
+}
+
+
 .karangg-box{
     background-color: #247BA0;
     border: 2px solid #C5C6C7;
