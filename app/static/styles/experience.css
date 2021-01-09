@@ -14,7 +14,8 @@
     font-family: 'Raleway', sans-serif;
 }
 body{
-    background-color: #568259;
+    background-image: url(https://images.pexels.com/photos/1340588/pexels-photo-1340588.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
 }
 .nav-bar{
     /*background-color: #2491db;*/
@@ -101,7 +102,7 @@ nav ul li:hover{
     width: 100%;
 }
 .relevant-coursework-box{
-    background-color: #45A29E;
+    background-color: #247BA0;/*#1D70A2;*/  /* #3083DC*/ /*#247BA0"*/
     border: 2px solid #C5C6C7;
     border-radius: 10px;
     width: 600px;
@@ -140,7 +141,7 @@ nav ul li:hover{
     margin-left: 20px;
 }
 .future-coursework-box{
-    background-color: #45A29E;
+    background-color: #247BA0;
     border: 2px solid #C5C6C7;
     border-radius: 10px;
     width: 600px;
@@ -166,7 +167,7 @@ nav ul li:hover{
 }
 
 .experience-box{
-    background-color: #45A29E;
+    background-color: #247BA0;
     border: 2px solid #C5C6C7;
     border-radius: 10px;
     width: 600px;

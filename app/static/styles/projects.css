@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&display=swap');
 
 body{
-    background-color: #568259;
+    background-image: url(https://images.pexels.com/photos/1340588/pexels-photo-1340588.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
 }
 .nav-bar{
     background-color: #1F2833;
@@ -70,19 +71,34 @@ nav li:hover{
 }
 .content-box{
     width: 1400px;
-    height: 400px;
+    height: 500px;
     border-width:5px;
     margin-top: 250px;
     text-align: justify;
 }
 
-.karangg-box{
-    background-color: #45A29E;
+
+.karanwebsite-box{
+    background-color: #247BA0;
     border: 2px solid #C5C6C7;
     border-radius: 10px;
     width: 1200px;
     height: 350px;
     margin-left: 100px;
+    color: white;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: normal;
+}
+
+.karangg-box{
+    background-color: #247BA0;
+    border: 2px solid #C5C6C7;
+    border-radius: 10px;
+    width: 1200px;
+    height: 350px;
+    margin-left: 100px;
+    margin-top: 50px;
     color: white;
     text-align: left;
     font-family: 'Raleway', sans-serif;
@@ -155,6 +171,9 @@ nav li:hover{
     color: #1F2833;
 }
 
+
+
+
 .icon-link{
     position: fixed;
     padding-left: 5px;
@@ -166,3 +185,7 @@ nav li:hover{
 .icon-link a{
     color: #1F2833;
 }
+
+
+
+
