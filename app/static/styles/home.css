@@ -503,7 +503,7 @@ ul.current-list li a{
 }
 #java-text-raise{
     position: relative;
-    color: #66FCF1;
+    color: white;
     top: -19px;
     left: 18px;
 }
@@ -532,7 +532,7 @@ ul.current-list li a{
 }
 #python-text-raise{
     position: relative;
-    color: #66FCF1;
+    color: white;
     top: -19px;
     left: 17px;
 }
@@ -561,7 +561,7 @@ ul.current-list li a{
 }
 #html-text-raise{
     position: relative;
-    color: #66FCF1;
+    color: white;
     top: -19px;
     left: 17px;
 }
@@ -589,7 +589,7 @@ ul.current-list li a{
 }
 #css-text-raise{
     position: relative;
-    color: #66FCF1;
+    color: white;
     top: -19px;
     left: 17px;
 }
@@ -618,7 +618,7 @@ ul.current-list li a{
 }
 #assembly-text-raise{
     position: relative;
-    color: #66FCF1;
+    color: white;
     top: -19px;
     left: 17px;
 }
@@ -646,7 +646,7 @@ ul.current-list li a{
 }
 #ocaml-text-raise{
     position: relative;
-    color: #66FCF1;
+    color: white;
     top: -19px;
     left: 17px;
 }
@@ -678,7 +678,8 @@ a{
     bottom: 0px;
     border: 1px solid #C5C6C7;
     border-radius: 5px;
+    color: white;
 }
 .icon-link a{
-    color: #1F2833;
+    color: #C5C6C7;
 }
