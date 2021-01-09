@@ -209,11 +209,11 @@ nav ul li:hover{
 }
 .text{
     margin-left: 210px;
-    margin-top: 50px;
+    margin-top: 25px;
     border: 2px solid #C5C6C7;
     border-radius: 10px;
     width: 550px;
-    height: 250px;
+    height: 300px;
 }
 .contact-icon-holder{
     margin-top: 75px;
@@ -223,15 +223,24 @@ nav ul li:hover{
 .contact-email{
     text-align: center;
 }
+.contact-email-title{
+    font-weight: bold;
+}
 .contact-phone{
-    margin-top: -10px;
+    margin-top: -4px;
     text-align: center;
-    line-height: 40px;
+}
+.contact-phone-title{
+    margin-top: 5px;
+    font-weight: bold;
 }
 .contact-linkedin{
-    margin-top: 0px;
+    margin-top: 6px;
     text-align: center;
-    line-height: 20px;
+}
+.contact-linkedin-title{
+    margin-top: -5px;
+    font-weight: bold;
 }
 .contact-linkedin a{
     color: white;
@@ -245,6 +254,9 @@ nav ul li:hover{
     font-size: 19px;
     color: #1F2833;
     display: inline;
+}
+.randomTest{
+    color: #45A29E;
 }
 .container{ 
     width: 600px;
@@ -279,4 +291,16 @@ nav ul li:hover{
 #number::after{
     content: "\a";
     white-space: pre;
+}
+
+.icon-link{
+    position: fixed;
+    padding-left: 5px;
+    padding-right: 5px;
+    bottom: 0px;
+    border: 1px solid #C5C6C7;
+    border-radius: 5px;
+}
+.icon-link a{
+    color: #1F2833;
 }

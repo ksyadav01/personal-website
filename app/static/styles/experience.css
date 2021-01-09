@@ -217,3 +217,15 @@ nav ul li:hover{
     color: #1F2833;
 
 }
+
+.icon-link{
+    position: fixed;
+    padding-left: 5px;
+    padding-right: 5px;
+    bottom: 0px;
+    border: 1px solid #C5C6C7;
+    border-radius: 5px;
+}
+.icon-link a{
+    color: #1F2833;
+}
