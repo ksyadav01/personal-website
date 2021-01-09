@@ -7,25 +7,37 @@
     /*font-family: 'Leto', sans-serif;*/
     font-family: 'Raleway', sans-serif;
 }
+#karangg-header{
+    color: Black;
+    text-align: center;
+    /* font-family: 'Leto', sans-serif;*/
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    background-color: rgb(31, 40, 51, .90);
+}
 .nav-bar{
-    background-color: #2491db;
+    /*background-color: #2491db;*/
+    background-color: #1F2833;
     position: fixed;
     border-width: 0px;
     width: 100%;
-    height: 75px;
+    height: 74px;
     margin-top: -22px;
     margin-left: -8px;
     z-index: 10;
 }
 .nav-bar a {
     font-size: 16px;
-    color: white;
+    color: #66FCF1;
+    /*color: white;*/
     padding: 14px 16px;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
 }
 nav{
-    background-color: #2491db;
+    /*background-color: #2491db;*/
+    background-color: #1F2833;
 }
 nav ul{
     text-align: center;
@@ -36,13 +48,27 @@ ul{
 nav ul li{
     display: inline-block;
     padding: 20px;
-    color: white;
+    /*color: white;*/
+    color: #66FCF1;
     font-family: Arial;
     transition: .2s ease-out;
 }
-nav li:hover{
-    background-color: rgb(255, 123, 0);
+nav ul li:hover{
+    /*background-color: rgb(255, 123, 0);*/
+    background-color: #0b0c10;
 }
+.underbar-nav{
+    position: relative;
+    top: 53px;
+    width: 100%;
+    height: 0px;
+    border: 1px solid #0B0C10;
+    z-index: 2000;
+}
+
+
+
+
 .main-box{
     display: block;
     width: 100%;
@@ -62,34 +88,41 @@ nav li:hover{
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 65px;
-    color:rgb(255, 123, 0);
+    color:#66FCF1;
     /*text-shadow: 1px 1px rgb(255, 123, 0);*/
 }
-
 .left-box{
 
     width: 100%;
+    justify-content: right;
 }
 .right-box{
     border: 0px;
     width: 100%;
 }
 .relevant-coursework-box{
-    background-color: rgb(211,211,211, .65);
-    border: 2px solid rgb(255, 123, 0);
+    background-color: #45A29E;
+    border: 2px solid #C5C6C7;
     border-radius: 10px;
     width: 600px;
-    height: 300px;
+    height: 330px;
     margin-left: 100px;
-    
+    color: white;
     text-align: left;
     font-family: 'Raleway', sans-serif;
     font-size: normal;
 }
 .relevant-coursework-box h3{
+    color: #1F2833;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
+    line-height: 15px;
+}
+.relevant-coursework-box hr{
+    width: 90%;
+    color: #1F2833;
+
 }
 .cse li{
     list-style-image: url(https://img.icons8.com/color/20/000000/google-code.png);
@@ -101,29 +134,40 @@ nav li:hover{
     line-height: 23px;
     margin-left: 20px;
 }
+.languages li{
+    list-style-image: url(https://github.com/ksyadav01/image-holder/blob/main/images/icons8-bug-20-1.png?raw=true);
+    line-height: 23px;
+    margin-left: 20px;
+}
 .future-coursework-box{
-    background-color: rgb(211,211,211, .65);
-    border: 2px solid rgb(255, 123, 0);
+    background-color: #45A29E;
+    border: 2px solid #C5C6C7;
     border-radius: 10px;
     width: 600px;
     height: 250px;
     margin-left: 100px;
     margin-top: 60px;
-    
+    color: white;
     text-align: left;
     font-family: 'Raleway', sans-serif;
     font-size: normal;
 }
 .future-coursework-box h3{
+    color: #1F2833;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
+    line-height: 15px;
+}
+.future-coursework-box hr{
+    width: 90%;
+    color: #1F2833;
+
 }
 
-
 .experience-box{
-    background-color: rgb(211,211,211, .65);
-    border: 2px solid rgb(255, 123, 0);
+    background-color: #45A29E;
+    border: 2px solid #C5C6C7;
     border-radius: 10px;
     width: 600px;
     height: 500px;
@@ -131,27 +175,36 @@ nav li:hover{
     text-align: left;
     font-family: 'Raleway', sans-serif;
     font-size: normal;
+    color: white;
 }
 .experience-box h3{
+    color: #1F2833;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
+    line-height: 15px;
+}
+.experience-box hr{
+    width: 90%;
+    color: #1F2833;
+
 }
 .gcom-box{
     width:575px;
     margin-left: 12.5px;
     margin-top: 50px;
-    border: 2px solid #2491db;
+    border: 2px solid #1F2833;
     border-radius: 10px;
 }
 .gcom{
-    margin-top: -10px;
-    text-align: justify;
+    margin-top: -35px;
+    text-align: left;
     padding: 12.5px;
 }
 .gcom-box h4{
     text-align: left;
     font-family: 'Raleway', sans-serif;
+    color: #0B0C10;
     font-size: 20px;
     line-height: 0px;
     padding: 12.5px;
@@ -160,8 +213,7 @@ nav li:hover{
     text-align: left;
     font-family: 'Raleway', sans-serif;
     font-size: 17px;
-    text-decoration: none;
     line-height: 0px;
-    color: rgb(255, 123, 0);
+    color: #1F2833;
 
 }

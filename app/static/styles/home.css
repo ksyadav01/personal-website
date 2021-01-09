@@ -13,8 +13,12 @@
     /* font-family: 'Leto', sans-serif;*/
     font-family: 'Raleway', sans-serif;
 }
+body{
+    background-color: #1F2833;
+}
 .nav-bar{
-    background-color: #2491db;
+    /*background-color: #2491db;*/
+    background-color: #1F2833;
     position: fixed;
     border-width: 0px;
     width: 100%;
@@ -25,13 +29,15 @@
 }
 .nav-bar a {
     font-size: 16px;
-    color: white;
+    color: #66FCF1;
+    /*color: white;*/
     padding: 14px 16px;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
 }
 nav{
-    background-color: #2491db;
+    /*background-color: #2491db;*/
+    background-color: #1F2833;
 }
 nav ul{
     text-align: center;
@@ -42,12 +48,14 @@ ul{
 nav ul li{
     display: inline-block;
     padding: 20px;
-    color: white;
+    /*color: white;*/
+    color: #66FCF1;
     font-family: Arial;
     transition: .2s ease-out;
 }
 li:hover{
-    background-color: rgb(255, 123, 0);
+    /*background-color: rgb(255, 123, 0);*/
+    background-color: #0b0c10;
 }
 
 /*
@@ -135,6 +143,8 @@ html {
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: none;
+    
+    filter: brightness(60%);
     opacity: 0;
     z-index: 0;
     animation: imageAnimation 36s linear infinite 0s; 
@@ -147,7 +157,7 @@ html {
     width: 100%;
     text-align: center;
     opacity: 0;
-    color: #fff;
+    color: #C5C6C7;
     animation: titleAnimation 36s linear infinite 0s; 
 }
 .cb-slideshow li div h3 { 
@@ -155,6 +165,9 @@ html {
     font-size: 150px;
     padding: 0;
     line-height: 0px; 
+}
+#brightness-reduction{
+    filter: brightness(60%);
 }
 .cb-slideshow li:nth-child(1) span { 
     background-image: url(https://github.com/ksyadav01/image-holder/blob/main/images/combo%20image.jpg?raw=true) 
@@ -229,7 +242,6 @@ html {
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    border: 1px solid red;
     height: 820px;
     padding: 0px;
     margin: 0px;
@@ -268,13 +280,14 @@ html {
     height: 700px;
     border: 0px;
     border-radius: 5px;
-    background-color: rgb(211,211,211, .65);
+    background-color: rgb(69, 162, 158, 0.75);
+    color: #0B0C10;
     text-align: justify;
 }
 .info-inner-text-box-photo{
     width: 200px;
     position: relative;
-    border: 0px;
+    border: 3px solid #1F2833;
     border-radius: 300px;
     top: 0px;
     margin-top: 50px;
@@ -292,8 +305,11 @@ html {
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
     padding: 25px;
-    color: black;
+    color: white;
     line-height: 30px;
+}
+.info-inner-text-box-text a{
+    color: #0B0c10;
 }
 #photo_opacity{
     opacity: 1;
@@ -310,14 +326,20 @@ html {
     font-size: 50px;
     line-height: 3px;
     margin-top: 50px;
+    color: #1F2833;
+}
+.info-inner-text-box-name hr{
+    height: 1px;
+    background-color: #0b0c10;
+    border: none;
 }
 #github-background{
     width: 32px;
     height: 30px;
     justify-content: center;
-    border: 1px;
+    border: 2px solid #C5C6C7;
     border-radius: 10px;
-    background-color: tan;
+    background-color: #1F2833;
     position: relative;
     padding: 20px;
     padding-top: 30px;
@@ -335,7 +357,7 @@ html {
     padding-bottom: 0px;
 }
 #github-background:hover{
-    background-color: rgb(210, 180, 140, 0.55);
+    background-color: #0B0C10 /*rgb(31, 40, 51, 0.65);*/
 }
 #linkedin-image{
     width: 30px;
@@ -345,19 +367,19 @@ html {
     width: 30px;
     height: 30px;
     justify-content: center;
-    border: 1px;
+    border: 2px solid #C5C6C7;
     border-radius: 10px;
-    background-color: tan;
+    background-color: #1F2833;
     position: relative;
     padding: 21px;
     padding-top: 30px;
     padding-bottom: 10px;
-    left: 251px;
+    left: 286px;
     top: -33.5px;
 }
 
 #linkedin-background:hover{
-    background-color: rgb(210, 180, 140, 0.55);
+    background-color: #0B0C10 /*rgb(31, 40, 51, 0.65);*/
 }
 
 .current-box{
@@ -384,7 +406,7 @@ html {
     width: 500px;
     height: 300px;
     border-radius: 5px;
-    background-color: rgb(211,211,211, .65);
+    background-color: rgb(69, 162, 158, 0.75);
     position: fixed;
     text-align: justify;
 }
@@ -396,6 +418,7 @@ html {
     padding-top:20px;
     margin-left: 25px;
     line-height: 10px;
+    color: #0b0c10
 }
 .current-text{
     width:440px;
@@ -406,12 +429,13 @@ html {
     margin-top: 0px;
     margin-left: 25px;
     line-height: 30px;
+    color: white;
 }
 .current-lists{
     display: inline-block;
     float: left;
-    position: relative;
-    top: -55px;
+    position: fixed;
+    top: 470px;
 }
 .current-list{
     margin-left: 20px;
@@ -428,7 +452,7 @@ ul.current-list li:hover{
     background-color: rgb(211,211,211, 0);
 }
 ul.current-list li a{
-    color: white;
+    color: #0B0c10;
 }
 
 #sbu-logo{
@@ -462,9 +486,9 @@ ul.current-list li a{
     width: 44px;
     height: 15px;
     justify-content: center;
-    border: 2px solid rgb(255, 123, 0);
+    border: 2px solid #C5C6C7;
     border-radius: 10px;
-    background-color: rgb(231, 231, 231);
+    background-color: #1F2833;
     position: relative;
     padding: 5px;
     padding-top: 10px;
@@ -479,7 +503,7 @@ ul.current-list li a{
 }
 #java-text-raise{
     position: relative;
-    color: #2491db;
+    color: #66FCF1;
     top: -19px;
     left: 18px;
 }
@@ -490,9 +514,9 @@ ul.current-list li a{
     width: 55px;
     height: 15px;
     justify-content: center;
-    border: 2px solid rgb(255, 123, 0);
+    border: 2px solid #C5C6C7;
     border-radius: 10px;
-    background-color: rgb(231, 231, 231);
+    background-color: #1F2833;
     position: relative;
     padding: 5px;
     padding-top: 10px;
@@ -508,7 +532,7 @@ ul.current-list li a{
 }
 #python-text-raise{
     position: relative;
-    color: #2491db;
+    color: #66FCF1;
     top: -19px;
     left: 17px;
 }
@@ -519,9 +543,9 @@ ul.current-list li a{
     width: 44px;
     height: 15px;
     justify-content: center;
-    border: 2px solid rgb(255, 123, 0);
+    border: 2px solid #C5C6C7;
     border-radius: 10px;
-    background-color: rgb(231, 231, 231);
+    background-color: #1F2833;
     position: relative;
     padding: 5px;
     padding-top: 10px;
@@ -537,7 +561,7 @@ ul.current-list li a{
 }
 #html-text-raise{
     position: relative;
-    color: #2491db;
+    color: #66FCF1;
     top: -19px;
     left: 17px;
 }
@@ -547,9 +571,9 @@ ul.current-list li a{
     width: 38px;
     height: 15px;
     justify-content: center;
-    border: 2px solid rgb(255, 123, 0);
+    border: 2px solid #C5C6C7;
     border-radius: 10px;
-    background-color: rgb(231, 231, 231);
+    background-color: #1F2833;
     position: relative;
     padding: 5px;
     padding-top: 10px;
@@ -565,7 +589,7 @@ ul.current-list li a{
 }
 #css-text-raise{
     position: relative;
-    color: #2491db;
+    color: #66FCF1;
     top: -19px;
     left: 17px;
 }
@@ -576,9 +600,9 @@ ul.current-list li a{
     width: 65px;
     height: 15px;
     justify-content: center;
-    border: 2px solid rgb(255, 123, 0);
+    border: 2px solid #C5C6C7;
     border-radius: 10px;
-    background-color: rgb(231, 231, 231);
+    background-color: #1F2833;
     position: relative;
     padding: 5px;
     padding-top: 10px;
@@ -594,7 +618,7 @@ ul.current-list li a{
 }
 #assembly-text-raise{
     position: relative;
-    color: #2491db;
+    color: #66FCF1;
     top: -19px;
     left: 17px;
 }
@@ -604,9 +628,9 @@ ul.current-list li a{
     width: 50px;
     height: 15px;
     justify-content: center;
-    border: 2px solid rgb(255, 123, 0);
+    border: 2px solid #C5C6C7;
     border-radius: 10px;
-    background-color: rgb(231, 231, 231);
+    background-color: #1F2833;
     position: relative;
     padding: 5px;
     padding-top: 10px;
@@ -622,7 +646,7 @@ ul.current-list li a{
 }
 #ocaml-text-raise{
     position: relative;
-    color: #2491db;
+    color: #66FCF1;
     top: -19px;
     left: 17px;
 }
