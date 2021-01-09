@@ -44,7 +44,12 @@ def projects():
 def contact():
     return render_template('contact.html')
 
-    
+
+@app.route('/resume')
+def resume():
+    return redirect("http://www.keepandshare.com/doc3/view.php?id=63274&da=y")
+
+
 @app.route('/projects/karan.gg')
 def karangg():
     return render_template('karangg.html')
