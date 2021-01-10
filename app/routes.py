@@ -50,7 +50,7 @@ def contact():
 
 @app.route('/resume')
 def resume():
-    return redirect("http://www.keepandshare.com/doc3/view.php?id=63274&da=y")
+    return redirect("http://www.keepandshare.com/doc3/view.php?id=63280&da=y")
 
 
 @app.route('/projects/karan.gg')
