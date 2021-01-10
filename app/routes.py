@@ -1,13 +1,11 @@
 import os
 
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, send_from_directory
 # from flask_table import Table, Col
 from werkzeug.utils import redirect
-# import individual_search
-# import individual_search
-from app import individual_search
 from app import song
 from app import app
+
 # app = Flask(__name__)
 # app.config['SECRET_KEY'] = 'test'
 summoner_name = ""
@@ -34,10 +32,11 @@ def home():
     return render_template('home.html', artist=song_data.json()['recenttracks']['track'][0]['artist']['#text'],
                            song=song_data.json()['recenttracks']['track'][0]['name'])
 
+
 @app.route('/coursework_experience')
 def coursework_experience():
-
     return render_template('experience.html')
+
 
 @app.route('/projects')
 def projects():
@@ -59,6 +58,10 @@ def karangg():
     return render_template('karangg.html')
 
 
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 # @app.route('/projects/karan.gg/individual_search/your_data', methods=['POST', 'GET'])
 # def your_data():
 #     if request.method == 'POST':
