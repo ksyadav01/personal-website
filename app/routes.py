@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, render_template, request, url_for
 # from flask_table import Table, Col
 from werkzeug.utils import redirect
@@ -6,6 +8,7 @@ from werkzeug.utils import redirect
 from app import individual_search
 from app import song
 from app import app
+from boto.s3.connection import S3Connection
 # app = Flask(__name__)
 # app.config['SECRET_KEY'] = 'test'
 summoner_name = ""
@@ -14,7 +17,8 @@ game_list = ""
 champion = ""
 match_history_list = ""
 individual_search_type = ""
-
+riot_key = S3Connection(os.environ['RIOTAPI'])
+lastfm_key = S3Connection(os.environ['LASTFM'])
 stats = []
 
 
@@ -26,7 +30,7 @@ def about():
 @app.route('/')
 @app.route('/home')
 def home():
-    song_data = song.getSong()
+    song_data = song.getSong(lastfm_key)
     return render_template('home.html', artist=song_data.json()['recenttracks']['track'][0]['artist']['#text'],
                            song=song_data.json()['recenttracks']['track'][0]['name'])
 
