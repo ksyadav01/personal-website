@@ -8,7 +8,6 @@ from werkzeug.utils import redirect
 from app import individual_search
 from app import song
 from app import app
-from boto.s3.connection import S3Connection
 # app = Flask(__name__)
 # app.config['SECRET_KEY'] = 'test'
 summoner_name = ""
@@ -17,8 +16,9 @@ game_list = ""
 champion = ""
 match_history_list = ""
 individual_search_type = ""
-riot_key = S3Connection(os.environ['RIOTAPI'])
-lastfm_key = S3Connection(os.environ['LASTFM'])
+riot_key = os.environ.get('RIOTAPI')
+lastfm_key = os.environ.get('LASTFM')
+
 stats = []
 
 
@@ -36,8 +36,8 @@ def home():
 
 @app.route('/coursework_experience')
 def coursework_experience():
-    return render_template('experience.html')
 
+    return render_template('experience.html')
 
 @app.route('/projects')
 def projects():
