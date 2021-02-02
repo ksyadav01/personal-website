@@ -181,7 +181,7 @@ html {
     animation-delay: 12s; 
 }
 .cb-slideshow li:nth-child(4) span { 
-    background-image: url(https://github.com/ksyadav01/image-holder/blob/main/images/ITSEC%20images.jpg?raw=true);
+    background-image: url(https://github.com/ksyadav01/image-holder/blob/main/images/presentation.png?raw=true); /*presentation*/
     animation-delay: 18s; 
 }
 .cb-slideshow li:nth-child(5) span { 
