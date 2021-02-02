@@ -176,7 +176,7 @@ html {
     background-image: url(https://github.com/ksyadav01/image-holder/blob/main/images/IMG_0414.jpeg?raw=true); /* itsec*/
     animation-delay: 6s; 
 }
-.cb-slideshow li:nth-child(3) span { 
+.cb-slideshow li:nth-child(3) span {  
     background-image: url(https://github.com/ksyadav01/image-holder/blob/main/images/me%20driving%20at%20driver%20station.JPG?raw=true);
     animation-delay: 12s; 
 }
