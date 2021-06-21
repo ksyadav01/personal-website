@@ -14,7 +14,7 @@
     font-family: 'Raleway', sans-serif;
 }
 body{
-    background-image: url(https://github.com/ksyadav01/image-holder/blob/main/images/20210109173136.png?raw=true);
+    background-image: url(https://images.pexels.com/photos/1340588/pexels-photo-1340588.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background-size: cover;
 }
 .nav-bar{
@@ -106,7 +106,7 @@ nav ul li:hover{
     border: 2px solid #C5C6C7;
     border-radius: 10px;
     width: 600px;
-    height: 510px;
+    height: 330px;
     margin-left: 100px;
     color: white;
     text-align: left;
@@ -145,10 +145,9 @@ nav ul li:hover{
     border: 2px solid #C5C6C7;
     border-radius: 10px;
     width: 600px;
-    height: 180px;
+    height: 250px;
     margin-left: 100px;
     margin-top: 60px;
-    margin-bottom: 60px;
     color: white;
     text-align: left;
     font-family: 'Raleway', sans-serif;
@@ -172,16 +171,15 @@ nav ul li:hover{
     border: 2px solid #C5C6C7;
     border-radius: 10px;
     width: 600px;
-    height: 1200px;
+    height: 500px;
     margin-left: 210px;
-    margin-bottom: 100px;
     text-align: left;
     font-family: 'Raleway', sans-serif;
     font-size: normal;
     color: white;
 }
 .experience-box h3{
-    color: #ffffff;
+    color: #1F2833;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
@@ -196,7 +194,7 @@ nav ul li:hover{
     width:575px;
     margin-left: 12.5px;
     margin-top: 50px;
-    border: 2px solid #ffffff;
+    border: 2px solid #1F2833;
     border-radius: 10px;
 }
 .gcom{

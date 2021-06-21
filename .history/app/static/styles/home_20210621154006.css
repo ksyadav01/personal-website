@@ -522,7 +522,7 @@ ul.current-list li a{
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
-    left: 41px;
+    left: 34px;
     top: 300px;
     font-size: small;
 }
@@ -551,7 +551,7 @@ ul.current-list li a{
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
-    left: 53px;
+    left: 51px;
     top: 300px;
     font-size: small;
 }
@@ -608,7 +608,7 @@ ul.current-list li a{
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
-    left: 82px;
+    left: 85px;
     top: 300px;
     font-size: small;
 }
@@ -625,7 +625,7 @@ ul.current-list li a{
 
 .javascript-logo{
     float: left;
-    width: 70px;
+    width: 60px;
     height: 15px;
     justify-content: center;
     border: 2px solid #C5C6C7;
@@ -636,7 +636,7 @@ ul.current-list li a{
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
-    left: 29px;
+    left: 32px;
     top: 300px;
     font-size: small;
 }
